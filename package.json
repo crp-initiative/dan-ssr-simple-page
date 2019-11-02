@@ -1,0 +1,27 @@
+{
+  "name": "dan-ssr-simple-page",
+  "version": "1.0.0",
+  "description": "Dan simple SSR page",
+  "main": "server.js",
+  "scripts": {
+    "start": "cross-env nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crp-initiative/dan-ssr-simple-page.git"
+  },
+  "author": "levente.csordas@gmail.com <Levente Csordas>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crp-initiative/dan-ssr-simple-page/issues"
+  },
+  "homepage": "https://github.com/crp-initiative/dan-ssr-simple-page#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "cross-env": "6.0.3",
+    "nodemon": "1.19.4"
+  }
+}
