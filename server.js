@@ -1,7 +1,4 @@
-const express = require('express');
-const console = require('console');
-
-const app = express();
+const app = require('./app/app');
 
 app.listen(3000, (err) => {
     if (err) {
