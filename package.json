@@ -3,8 +3,25 @@
   "version": "1.0.0",
   "description": "Dan simple SSR page",
   "main": "server.js",
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,scss,sass}": [
+      "stylelint --fix",
+      "git add --force"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "scripts": {
     "start": "cross-env nodemon -e hbs,js server.js",
+    "lint:js": "eslint --ext .js .",
+    "lint:styles": "stylelint './**/*.{css,scss,sass}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +40,22 @@
   },
   "devDependencies": {
     "cross-env": "6.0.3",
-    "nodemon": "1.19.4"
+    "eslint": "6.6.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-prettier": "6.5.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "husky": "3.0.9",
+    "lint-staged": "9.4.2",
+    "nodemon": "1.19.4",
+    "prettier": "1.18.2",
+    "stylelint": "10.1.0",
+    "stylelint-config-prettier": "5.2.0",
+    "stylelint-config-recommended-scss": "3.3.0",
+    "stylelint-config-standard": "18.3.0",
+    "stylelint-order": "3.0.0",
+    "stylelint-prettier": "1.1.1",
+    "stylelint-scss": "3.8.0"
   }
 }

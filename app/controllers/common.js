@@ -1,7 +1,7 @@
 class CommonController {
-    notFound(req, resp) {
-        return resp.render('not-found',  {pageTitle: 'Oops - Not found'});
-    }
+  static notFound(req, resp) {
+    return resp.render('not-found', { pageTitle: 'Oops - Not found' });
+  }
 }
 
-module.exports = new CommonController();
+module.exports = CommonController;
