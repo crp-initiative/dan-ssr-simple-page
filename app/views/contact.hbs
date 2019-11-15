@@ -1,4 +1,44 @@
 <header>
     <h1>Contact</h1>
 </header>
-<p>here we work</p>
+<div class="container">
+    <form action="/contact" method="post">
+        <div class="sheader">
+            <h2>Sent us a message</h1>
+            <p>For further information please compile this form.</p>
+        </div>
+        <div class="user-info">
+            <input id="firstname" type="text" name="firstName" placeholder="First Name">
+            <input id="lastname" type="text" name="lastname" placeholder="Last Name" required>
+            <input id="email" type="email" name="email" placeholder="Email" required>
+            <input id="phone" type="tel"  name="phone" placeholder="Phone" required>
+        </div>
+        <div class="textarea">
+            <textarea name="message" id="textarea" cols="108" rows="10" placeholder="Write your message here" required></textarea>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <div class="advert-container">
+        <div class="advert">
+            <img class="contact firstcontact" src="/static/images/phone.png" alt="">
+            <h3 class="aheader">Call us</h3>
+            <p>0753.959.997</p>
+        </div>
+        <div class="advert">
+            <img src="/static/images/email.jpg" alt="" class="contact">
+            <h3 class="aheader">Email us</h3>
+            <p>case@dezmir.ro</p>
+        </div>
+        <br>
+        <br>
+        <div class="advert">
+            <h3>Stay conected whit us:</h3>
+            <a href="https://www.facebook.com/giulean.dan" target="#blank"><img src="/static/images/facebook.jpg" alt="" class="contact" ></a>
+        </div>
+    </div>
+</div>
+<footer>
+    <p class="fparagraph firstparagraph">Find us on Dezmir, street Panoramic, no. 7.</p>
+    <p class="fparagraph">0753.959.997</p>
+    <p class="fparagraph">case@dezmir.ro</p>
+</footer>
