@@ -1,0 +1,11 @@
+<section>
+    <h1>Login Page</h1>
+    <form action="/login" method="POST">
+        {{#if message}}
+            <span>{{message}}</span>
+        {{/if}}
+        <input type="text" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <button type="submit">Login</button>
+    </form>
+</section>
