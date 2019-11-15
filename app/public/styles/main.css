@@ -6,17 +6,47 @@ body {
   margin: 0;
 }
 
+.navcontainer{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background:rgb(79, 214, 214);
+}
+
+.logo{
+  height: 0;
+}
+
+.navbar{
+  width: 90%;
+}
+
 ul {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
+  justify-content: flex-end;
 }
 
 li{
+  padding-left: 20px;
   list-style: none;
 }
 
 a{
+  color: #000;
   text-decoration: none;
+}
+
+footer{
+  justify-content: center;
+  padding-left: 100px;
+  margin-top: -20px;
+  background: rgb(79, 214, 214);
+}
+
+.firstparagraph{
+  padding-top: 30px;
+}
+
+.fparagraph{
+  margin-bottom: -14px;
 }
