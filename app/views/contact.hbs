@@ -3,6 +3,9 @@
 </header>
 <div class="container">
     <form action="/contact" method="post">
+        {{#if message}}
+        <span>{{message}}</span>
+        {{/if}}
         <div class="sheader">
             <h2>Sent us a message</h1>
             <p>For further information please compile this form.</p>
