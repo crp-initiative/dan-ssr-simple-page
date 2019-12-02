@@ -1,22 +1,33 @@
-const UserModel = require('../models/user');
+const db = require('../models');
 
+/**
+ *
+ */
 class AuthController {
+  /**
+   *
+   * @param req
+   * @param resp
+   * @returns {void | undefined | *|Promise<T>}
+   */
   static login(req, resp) {
     let data = {};
     if (req.method === 'POST') {
-      const user = UserModel.getUser();
-
-      if (user.email.toLowerCase() === req.body.email.toLowerCase()) {
-        if (user.password === req.body.password) {
-          return resp.redirect('/admin');
+      return db.User.findOne({
+        where: {
+          email: req.body.email.toLowerCase()
+        }
+      }).then(user => {
+        if (user) {
+          data = { message: 'Password verification is not implemented...' };
+        } else {
+          data = { message: 'Incorrect username or password.' };
         }
 
-        data = { message: 'Incorrect username or password.' };
-      }
-
-      data = { message: 'Incorrect username or password.' };
+        return resp.render('login', data);
+      });
     }
-    return resp.render('login', data);
+    return resp.render('login');
   }
 }
 

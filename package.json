@@ -22,6 +22,8 @@
     "start": "cross-env nodemon -e hbs,js server.js",
     "lint:js": "eslint --ext .js .",
     "lint:styles": "stylelint './**/*.{css,scss,sass}'",
+    "migrate": "cross-env sequelize db:migrate",
+    "migrate:undo": "cross-env sequelize db:migrate:undo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,7 +39,10 @@
   "dependencies": {
     "body-parser": "1.19.0",
     "express": "4.17.1",
-    "express-handlebars": "3.1.0"
+    "express-handlebars": "3.1.0",
+    "mysql2": "2.0.0",
+    "sequelize": "5.21.2",
+    "sequelize-cli": "5.5.1"
   },
   "devDependencies": {
     "cross-env": "6.0.3",
