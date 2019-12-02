@@ -12,6 +12,7 @@ router.get('/', home.index);
 
 // contact page route
 router.get('/contact', contact.index);
+router.post('/contact', contact.index);
 
 // login routes
 router.get('/login', auth.login);

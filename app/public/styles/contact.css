@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height: 100%;
+    height: auto;
     background: url('/static/images/contact_page_background.jpeg');
     background-attachment: fixed;
     background-position: center;
@@ -11,7 +11,7 @@ h1{
     padding: 252.5px;
     margin: 0;
     font-size: 3rem;
-    color: rgb(255, 255, 255);
+    color: rgb(116, 255, 255);
     text-align: center;
 }
 
@@ -36,58 +36,49 @@ form{
 }
 
 .user-info{
-    display: grid;
-    grid-template-areas: 
-    'fname lname'
-    'email phone';
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
 }
 
-#firstname{
-    grid-area: fname;
+input{
+    width: 30%;
+    padding: 10px;
+    margin: 10px 20px 20px 20px;
 }
 
-#lastname{
-    grid-area: lname;
+.textarea{
+    display: flex;
+    justify-content: center;
 }
 
-#email{
-    grid-area: email;
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 73px;
 }
 
-#phone{
-    grid-area: phone;
+#submit{
+    align-self: center;
+    width: auto;
+    padding: 20px 30px;
+    margin: 30px 0 40px;
+    font-size: 1.5rem;
+    color: #116365;
+    cursor: pointer;
+    background: rgb(79, 214, 214);
+    border: none;
 }
 
 .advert-container{
     width: 40%;
-    height: 100%;
     text-align: center;
     background:rgb(79, 214, 214);
 }
 
 .advert{
     padding-bottom: 60px;
-    
-}
-
-textarea{
-    margin: 22px;
-}
-
-button{
-    align-self: center;
-    width: auto;
-    padding: 10px 30px;
-    color: rgb(255, 255, 255);
-    background: rgb(79, 214, 214);
-    border: none;
-}
-
-input{
-    width: 50%;
-    padding: 10px;
-    margin: 10px 200px;
 }
 
 .contact{
@@ -101,4 +92,38 @@ input{
 
 .aheader{
     margin-bottom: -15px;
+}
+
+@media screen and (max-width: 600px)  {
+    .hcontact h1{
+        width: auto;
+        height: 200px;
+        padding: 0;
+        background-attachment: unset;
+    }
+    
+    input{
+        width: auto;
+        margin: 10px;
+    }
+    textarea{
+        width: auto;
+        margin: 10px 20px 10px 20px;
+    }
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+    form{
+        width: 100%;
+    }
+    .advert-container{
+        width: 100%;
+    }
+}
+
+@media screen and (orientation: landscape){
+    .container{
+        height: auto;
+    }
 }

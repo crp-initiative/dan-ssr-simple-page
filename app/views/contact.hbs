@@ -1,13 +1,14 @@
-<header>
+<header class="hcontact">
     <h1>Contact</h1>
 </header>
 <div class="container">
-    <form action="/contact" method="post">
+    <form action="/contact" method='POST'>
         {{#if message}}
         <span>{{message}}</span>
         {{/if}}
         <div class="sheader">
             <h2>Sent us a message</h1>
+            <hr>
             <p>For further information please compile this form.</p>
         </div>
         <div class="user-info">
@@ -17,7 +18,7 @@
             <input id="phone" type="tel"  name="phone" placeholder="Phone" required>
         </div>
         <div class="textarea">
-            <textarea name="message" id="textarea" cols="108" rows="10" placeholder="Write your message here" required></textarea>
+            <textarea name="message" id="textarea" cols="30" rows="10" placeholder="Write your message here" required></textarea>
         </div>
         <button id="submit" type="submit">Submit</button>
     </form>
@@ -40,8 +41,3 @@
         </div>
     </div>
 </div>
-<footer>
-    <p class="fparagraph firstparagraph">Find us on Dezmir, street Panoramic, no. 7.</p>
-    <p class="fparagraph">0753.959.997</p>
-    <p class="fparagraph">case@dezmir.ro</p>
-</footer>
