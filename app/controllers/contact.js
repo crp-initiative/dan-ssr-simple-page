@@ -1,6 +1,10 @@
 class ContactController {
   static index(req, resp) {
-    return resp.render('contact', { pageTitle: 'Contact' });
+    const data = { pageTitle: 'Contact' };
+    if (req.method === 'POST') {
+      data.message = 'Thank for your interest for our property. You will be shortly contacted by our Sales Department';
+    }
+    return resp.render('contact', data);
   }
 }
 

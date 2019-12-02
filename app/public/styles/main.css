@@ -5,3 +5,86 @@ body {
   padding: 0;
   margin: 0;
 }
+
+.navcontainer{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 90px;
+  background:rgb(79, 214, 214);
+}
+
+.image{
+  width: 150px;
+  height: 90px;
+  margin-left: 95px;
+}
+
+.navbar{
+  width: 90%;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  margin: 0;
+}
+
+li{
+  padding: 18px 40px 18px 18px;
+  list-style: none;
+}
+
+a{
+  font-size: 2rem;
+  color: #116365;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  padding: 20px;
+  font-size: 2rem;
+  color: rgb(79, 214, 214);
+  background: #116365;
+}
+
+footer{
+  justify-content: center;
+  padding-left: 100px;
+  margin-top: -20px;
+  background: rgb(79, 214, 214);
+}
+
+.firstparagraph{
+  padding-top: 30px;
+}
+
+.lastparagraph{
+  padding-bottom: 30px;
+}
+
+.fparagraph{
+  margin-bottom: -14px;
+}
+
+@media screen and  (max-width: 600px) {
+    .image{
+      margin: 0;
+    }
+    
+    .navcontainer {
+      position: relative;
+      display: inline-block;
+      height: auto;
+    }
+    .navcontainer ul {
+        flex-direction: column; 
+        align-items: center;
+        width:100%;
+        height: auto;
+    }
+    footer{
+        padding: 0 0 10px 10px;
+    }
+}
